@@ -7,87 +7,95 @@ var seasonalImage = document.getElementById("seasonal-image");
 var wrapper = document.getElementById("wrapper");
 
 if (month > 1 && month <5){
-    console.log("spring");
+    //console.log("spring");
     seasonalImage.src = "img/spring.jpg";
     wrapper.style.background = "rgba(124, 252, 0, 0.5)";
 }
 
 else if (month > 4 && month < 8 ){
-  console.log("summer");
+ // console.log("summer");
   seasonalImage.src = "img/summer.jpg";
   wrapper.style.background = "rgba(255, 215, 0, 0.5)";
 }
 
 else if (month > 7 && month < 11 ){
-  console.log("autumn");
+  //console.log("autumn");
   seasonalImage.src = "img/autumn.jpg";
   wrapper.style.background = "rgba(210, 105, 30, 0.8)";
 }
 
 else {
-  console.log("winter");
+  //console.log("winter");
   seasonalImage.src = "img/winter.jpg";
   wrapper.style.background = "rgba(0, 191, 255, 0.5)";
 }
 
 
-//function to convert temperature
 
-//gets button to convert
+
+//Converts Temperature
+//Access the button to convert
 var convertButton = document.getElementById("convert-temp-button");
-var farenheitTemp;
-var kelvinTemp;
-var celsiusTemp;
+
+//Accesses the results area of the page
+
 var farenheitResult = document.getElementById("farenheitResult");
 var celsiusResult = document.getElementById("celsiusResult");
 var kelvinResult = document.getElementById("kelvinResult");
 
-function convertTemp (){
-//Stores user temperature input
+var farenheitTemp = 0;
+var celsiusTemp = 0;
+var kelvinTemp = 0;
+
+
+//function to convert the temperature based on user input
+
+function executeConversion (){
   var tempInput = document.getElementById("temp-input").value;
-//Stores user temperature scale input
   var tempScale = document.getElementById("temp-scale").value;
-//Converts temperatures
-if (tempScale = "farenheit"){  
+  
+ //Checks to ensure that input is a number 
+
+   
+if (tempScale == "farenheit"){
    farenheitTemp = tempInput;
-   celsiusTemp = ((farenheit - 32) * (5 / 9));
-   kelvinTemp = (celsius + 273.15);
-   console.log(farenheitTemp + " farenheit");
-   console.log(celsiusTemp + " celsius");
-   console.log(kelvinTemp + " kelvin");
+   celsiusTemp = ((farenheitTemp - 32) * (5 / 9));
+   kelvinTemp = (celsiusTemp + 273.15);
 }
-else if (tempScale = "celsius"){
+
+else if (tempScale == "celsius"){
    celsiusTemp = tempInput;
    farenheitTemp = ((celsiusTemp * 1.8) + 32);
-   kelvinTemp = (celsiusTemp + 273.15);
-   console.log(farenheitTemp + " farenheit");
-   console.log(celsiusTemp + " celsius");
-   console.log(kelvinTemp + " kelvin");
+   kelvinTemp = ((farenheitTemp + 459.67) * (5 / 9));
 }
 
-else if (tempScale = "kelvin"){
-  kelvinTemp = tempInput;
-  celsiusTemp = (kelvinTemp - 273.15);
-  farenheitTemp = ((celsiusTemp * 1.8) + 32);
-  console.log(farenheitTemp + " farenheit");
-  console.log(celsiusTemp + " celsius");
-  console.log(kelvinTemp + " kelvin");
+else if (tempScale == "kelvin") {
+   kelvinTemp = tempInput;
+   celsiusTemp = (kelvinTemp - 273.15);
+   farenheitTemp = ((celsiusTemp * 1.8) + 32);
 }
-
-//add in a default else alert to pick a scale of if tempScale = selected
-
-farenheitResult.innerText = farentheitTemp + " degrees Farenheit.";
-celsiusResult.innerText = celsiusTemp + " degrees Celsius."
-kelvinResult.innerText = kelvinTemp + " degrees Kelvin."
-
-}//end function
   
-//calls the function to complete the conversion and display results
-convertButton.addEventListener("click", convertTemp);
+else {
+  alert("Please select a temperature scale");
+  }
 
-  
+
+ console.log("Input: " + tempInput);
+ console.log("Farenheit: " + farenheitTemp);
+ console.log("Celsius: " + celsiusTemp);
+ console.log("Kelvin: " + kelvinTemp);
 
 
+farenheitResult.innerText = farenheitTemp + " degrees Farenheit.";
+
+celsiusResult.innerText = celsiusTemp + " degrees Celsius.";
+
+kelvinResult.innerText = kelvinTemp + " degrees Kelvin.";
+}
+//Ends function
+
+//Calls function to convert on click
+convertButton.addEventListener("click", executeConversion);
 
 
 
