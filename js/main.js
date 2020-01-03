@@ -31,8 +31,63 @@ else {
 }
 
 
-
 //function to convert temperature
+
+//gets button to convert
+var convertButton = document.getElementById("convert-temp-button");
+var farenheitTemp;
+var kelvinTemp;
+var celsiusTemp;
+var farenheitResult = document.getElementById("farenheitResult");
+var celsiusResult = document.getElementById("celsiusResult");
+var kelvinResult = document.getElementById("kelvinResult");
+
+function convertTemp (){
+//Stores user temperature input
+  var tempInput = document.getElementById("temp-input").value;
+//Stores user temperature scale input
+  var tempScale = document.getElementById("temp-scale").value;
+//Converts temperatures
+if (tempScale = "farenheit"){  
+   farenheitTemp = tempInput;
+   celsiusTemp = ((farenheit - 32) * (5 / 9));
+   kelvinTemp = (celsius + 273.15);
+   console.log(farenheitTemp + " farenheit");
+   console.log(celsiusTemp + " celsius");
+   console.log(kelvinTemp + " kelvin");
+}
+else if (tempScale = "celsius"){
+   celsiusTemp = tempInput;
+   farenheitTemp = ((celsiusTemp * 1.8) + 32);
+   kelvinTemp = (celsiusTemp + 273.15);
+   console.log(farenheitTemp + " farenheit");
+   console.log(celsiusTemp + " celsius");
+   console.log(kelvinTemp + " kelvin");
+}
+
+else if (tempScale = "kelvin"){
+  kelvinTemp = tempInput;
+  celsiusTemp = (kelvinTemp - 273.15);
+  farenheitTemp = ((celsiusTemp * 1.8) + 32);
+  console.log(farenheitTemp + " farenheit");
+  console.log(celsiusTemp + " celsius");
+  console.log(kelvinTemp + " kelvin");
+}
+
+//add in a default else alert to pick a scale of if tempScale = selected
+
+farenheitResult.innerText = farentheitTemp + " degrees Farenheit.";
+celsiusResult.innerText = celsiusTemp + " degrees Celsius."
+kelvinResult.innerText = kelvinTemp + " degrees Kelvin."
+
+}//end function
+  
+//calls the function to complete the conversion and display results
+convertButton.addEventListener("click", convertTemp);
+
+  
+
+
 
 
 

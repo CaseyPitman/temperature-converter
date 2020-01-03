@@ -118,20 +118,20 @@ textarea {
      border-radius:10px;
    }
 
-   #temperature-input {
+   #temp-input {
      text-align:center;
      padding: 5px;
      margin:auto;
      border-radius:10px;
    }
 
-   #conversion-selector {
+   #temp-scale {
      background: white;
      margin: 20px auto 20px;
      border-radius:10px;
    }
 
-   #convert-temperature {
+   #convert-temp-button {
      background:white;
      border-radius:10px;
    }
