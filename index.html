@@ -1,16 +1,11 @@
 <!doctype html>
-<html class="no-js" lang="en-us">
-
+<html lang="en-us">
+<!-- A javaScript web app to convert temperature between Celsius, Farenheit, and Kelvin-->
 <head>
   <meta charset="utf-8">
   <title>Temperature Converter</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
-
   <!--Google Fonts-->
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
 
@@ -18,13 +13,9 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
 
-  <meta name="theme-color" content="#fafafa">
 </head>
 
 <body>
-  <!--[if IE]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-  <![endif]-->
 
   <section id="wrapper"> 
     <h1>Temperature Convertor</h1>
@@ -43,27 +34,24 @@
   </br>
   <button id="convert-temp-button">Convert Temperature</button>
 
-    <h2>The temperature is...</h2>
-    <p id="farenheitResult"> &nbsp;</p>
-    <p id="celsiusResult"> &nbsp;</p>
-    <p id="kelvinResult">&nbsp; </p>  
+    <div id="results-area">
+      <h2>The temperature is...</h2>
+      <p id="farenheitResult"> &nbsp;</p>
+      <p id="celsiusResult"> &nbsp;</p>
+      <p id="kelvinResult">&nbsp; </p>  
+    </div>
 
+    <div id="copyright">
+      <h3>&copy; 2020 Casey Pitman</h3>
+    </div>
   </section>
 
 
-
-  <script src="js/vendor/modernizr-3.7.1.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
 
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script>
+  
 </body>
 
 </html>

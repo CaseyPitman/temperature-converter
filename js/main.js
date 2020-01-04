@@ -54,6 +54,9 @@ function executeConversion (){
   var tempScale = document.getElementById("temp-scale").value;
   
  //Checks to ensure that input is a number 
+ if ($.isNumeric(tempInput)==false){
+   alert("You must enter the temperature as a number.")
+ }
 
  //User inputs farenheit temp  
 if (tempScale == "farenheit"){
