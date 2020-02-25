@@ -138,6 +138,11 @@ textarea {
      border-radius:10px;
    }
 
+   #convert-temp-button:hover{
+     transform:scale(1.2);
+     cursor:pointer;
+   }
+
    #seasonal-image {
      display:block;
      margin:auto;
