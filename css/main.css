@@ -105,11 +105,11 @@ textarea {
 
    }
    
-   
    /*optimized mobile first*/
 
    #wrapper {
      width: 90%;
+     max-width:360px;
      margin:25px auto;
      padding:5px;
      background:slategray;
@@ -141,7 +141,7 @@ textarea {
    #seasonal-image {
      display:block;
      margin:auto;
-     width:66%;
+     width:50%;
      max-width:500px;
      border:1px solid black;
      border-radius:10px;
@@ -151,15 +151,12 @@ textarea {
      background:#ffffff;
      border:1px solid #000000;
      border-radius:10px;
-     width:66%;
+     width:50%;
      max-width:500px;
      margin:20px auto;
      padding: 10px;
    }
 
-
-
-   
 
 /* ==========================================================================
    Helper classes

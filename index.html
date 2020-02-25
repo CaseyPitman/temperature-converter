@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Temperature Converter</title>
-  <meta name="description" content="">
+  <meta name="description" content="A javaScript web app to convert temperature between Celsius, Farenheit, and Kelvin.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!--Google Fonts-->
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
@@ -12,16 +12,14 @@
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
-
 </head>
 
 <body>
 
   <section id="wrapper"> 
     <h1>Temperature Convertor</h1>
-    
+    <!--Image will change based on the season-->
     <img src=" " alt="seasonal image" id="seasonal-image"/>
-    
     <h2>Enter the temperature</h2>
     <input id="temp-input" type="number" name="temperature" placeholder="Enter temperature">
   </br>
@@ -35,7 +33,6 @@
   <button id="convert-temp-button">Convert Temperature</button>
 
     <div id="results-area">
-      <h2>The temperature is...</h2>
       <p id="farenheitResult"> &nbsp;</p>
       <p id="celsiusResult"> &nbsp;</p>
       <p id="kelvinResult">&nbsp; </p>  

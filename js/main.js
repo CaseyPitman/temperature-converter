@@ -1,41 +1,40 @@
-//function to change the background color and image and based on the season
+//CHANGE BACKGROUND COLOR AND IMAGE BASED ON SEASON
 
+let display = function(){
 //get the date & month
-var month = new Date().getMonth();
-//var month = 8;  //Testing var
-var seasonalImage = document.getElementById("seasonal-image");
-var wrapper = document.getElementById("wrapper");
+  var month = new Date().getMonth();
+  var seasonalImage = document.getElementById("seasonal-image");
+  var wrapper = document.getElementById("wrapper");
 
-if (month > 1 && month <5){
-    //console.log("spring");
+  if (month > 1 && month <5){ //spring
     seasonalImage.src = "img/spring.jpg";
     wrapper.style.background = "rgba(124, 252, 0, 0.5)";
-}
+  }
 
-else if (month > 4 && month < 8 ){
- // console.log("summer");
-  seasonalImage.src = "img/summer.jpg";
-  wrapper.style.background = "rgba(255, 215, 0, 0.5)";
-}
+  else if (month > 4 && month < 8 ){ //summer
+    // console.log("summer");
+    seasonalImage.src = "img/summer.jpg";
+    wrapper.style.background = "rgba(255, 215, 0, 0.5)";
+  }
 
-else if (month > 7 && month < 11 ){
-  //console.log("autumn");
-  seasonalImage.src = "img/autumn.jpg";
-  wrapper.style.background = "rgba(210, 105, 30, 0.8)";
-}
+  else if (month > 7 && month < 11 ){ //autumn
+    //console.log("autumn");
+    seasonalImage.src = "img/autumn.jpg";
+    wrapper.style.background = "rgba(210, 105, 30, 0.8)";
+  }
 
-else {
-  //console.log("winter");
-  seasonalImage.src = "img/winter.jpg";
-  wrapper.style.background = "rgba(0, 191, 255, 0.5)";
-}
+  else { //winter
+    seasonalImage.src = "img/winter.jpg";
+    wrapper.style.background = "rgba(0, 191, 255, 0.5)";
+  }
+}//end display function
 
+//CALL THE DISPLAY FUNCTION ON LOAD
+window.onload = display();
 
-
-
-//Converts Temperature
+//CONVERT TEMPERATURE
 //Access the button to convert
-var convertButton = document.getElementById("convert-temp-button");
+//var convertButton = document.getElementById("convert-temp-button");
 
 //Accesses the results area of the page
 
@@ -84,23 +83,17 @@ else {
   alert("Please select a temperature scale");
   }
 
-
- console.log("Input: " + tempInput);
- console.log("Farenheit: " + farenheitTemp);
- console.log("Celsius: " + celsiusTemp);
- console.log("Kelvin: " + kelvinTemp);
+//Rounds all temperatures to the nearest tenth
+farenheitTemp = Math.round(10*farenheitTemp)/10;
+celsiusTemp = Math.round(10*celsiusTemp)/10;
+kelvinTemp= Math.round(10*kelvinTemp)/10;
 
 //Displays coversion results on the page
 farenheitResult.innerText = farenheitTemp + " degrees Farenheit.";
-
 celsiusResult.innerText = celsiusTemp + " degrees Celsius.";
-
 kelvinResult.innerText = kelvinTemp + " degrees Kelvin.";
-}
-//Ends function
+}//Ends function
 
 //Calls function to convert on click
-convertButton.addEventListener("click", executeConversion);
-
-
+document.getElementById("convert-temp-button").addEventListener("click", executeConversion);
 
