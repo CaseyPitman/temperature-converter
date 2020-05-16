@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en-us">
-<!-- A javaScript web app to convert temperature between Celsius, Farenheit, and Kelvin-->
 <head>
   <meta charset="utf-8">
   <title>Temperature Converter</title>
@@ -15,41 +14,31 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body>
-
-  <div id="wrapper"> 
-    <h1>Temperature Convertor</h1>
-    <!--Image will change based on the season-->
-    <img src=" " alt="seasonal image" id="seasonal-image"/>
-    <h2>Enter the temperature</h2>
-    <input id="temp-input" type="number" name="temperature" placeholder="Enter temperature">
-  </br>
-    <select id="temp-scale">
-      <option value="selected" selected>Select Temperature Scale</option>
-      <option value="farenheit">Farenheit</option>
-      <option value="celsius">Celsius</option>
-      <option value="kelvin">Kelvin</option>
-    </select>
-  </br>
-  <button id="convert-temp-button">Convert Temperature</button>
-
-    <div id="results-area">
-      <p id="farenheitResult"> &nbsp;</p>
-      <p id="celsiusResult"> &nbsp;</p>
-      <p id="kelvinResult">&nbsp; </p>  
+<body id="body">
+  <div class="container-fluid mt-5"> 
+    <h1 class="w-100 text-center">Temperature Converter</h1>
+    <div class="col-md-4 mx-auto">   
+      <!--Image will change based on the season-->
+      <img src=" " alt="seasonal image" id="seasonal-image" class="img img-fluid border-dark d-block mx-auto"/>
     </div>
-
-    <div>
-      <h3>Loction</h3>
-      <h4 id="location"></h4>
-      <h3>Temperature at your location:</h3>
-      <h4 id="location-temp"></h4>
+    <div class="col-md-4 mx-auto">
+      <input id="temp-input" class="form-control my-2" type="number" name="temperature" placeholder="Enter temperature">
+      <select id="temp-scale" class="form-control my-2">
+        <option value="selected" selected>Select a temperature Scale</option>
+        <option value="farenheit">Farenheit</option>
+        <option value="celsius">Celsius</option>
+        <option value="kelvin">Kelvin</option>
+      </select>
+      <button id="convert-temp-button" class="btn btn-dark btn-block my-2 flex-fill">Convert Temperature</button>
+      <div id="results-area" class="my-2 text-center">
+        <p id="farenheitResult"> &nbsp;</p>
+        <p id="celsiusResult"> &nbsp;</p>
+        <p id="kelvinResult">&nbsp; </p>  
+      </div>
     </div>
-
-    <div id="copyright">
-      <h3>&copy; 2020 Casey Pitman</h3>
-    </div>
-  </div>
+ 
+    <h5 class="col-md-12 text-center">&copy; 2020 Casey Pitman</h5>
+  </div> 
 
 <!--JS-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

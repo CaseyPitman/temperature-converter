@@ -3,60 +3,15 @@
 
    html {
      font-family:'Roboto', sans-serif;
-
-   }
-   
-   /*optimized mobile first*/
-
-   #wrapper {
-     width: 90%;
-     max-width:360px;
-     margin:25px auto;
-     padding:5px;
-     background:slategray;
-     text-align:center;
-     border:1px solid black;
-     border-radius:10px;
    }
 
-   #temp-input {
-     text-align:center;
-     padding: 5px;
-     margin:auto;
-     border:1px solid #000000;
-     border-radius:10px;
-   }
-
-   #temp-scale {
-     background: white;
-     margin: 20px auto 20px;
-     border-radius:10px;
-   }
-
-   #convert-temp-button {
-     background:white;
-     border:1px solid #000000;
-     border-radius:10px;
-   }
-
-   #convert-temp-button:hover{
-     transform:scale(1.2);
-     cursor:pointer;
-   }
-
-   #seasonal-image {
-
-
-     max-width:500px;
-
+   /*Remove Bootstrap default rounded corners*/
+   #temp-input,
+   #temp-scale,
+   .btn{
+     border-radius:0px;
    }
 
    #results-area {
-     background:#ffffff;
-     border:1px solid #000000;
-     border-radius:10px;
-     width:50%;
-     max-width:500px;
-     margin:20px auto;
-     padding: 10px;
+    background:rgb(255, 255, 255);
    }
