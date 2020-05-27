@@ -30,12 +30,7 @@ function display(){
 //CALL THE DISPLAY FUNCTION ON LOAD
 window.onload = display();
 
-//CONVERT TEMPERATURE
-//Access the button to convert
-//var convertButton = document.getElementById("convert-temp-button");
-
 //Accesses the results area of the page
-
 var farenheitResult = document.getElementById("farenheitResult");
 var celsiusResult = document.getElementById("celsiusResult");
 var kelvinResult = document.getElementById("kelvinResult");
